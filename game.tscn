@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://divsfu7v8v7o2"]
+
+[sub_resource type="Environment" id="Environment_2c8nk"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ytyvc"]
+
+[node name="Game" type="Node3D"]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Map"]
+size = Vector3(100, 0.13, 100)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Map"]
+environment = SubResource("Environment_2c8nk")
+camera_attributes = SubResource("CameraAttributesPractical_ytyvc")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Map"]
